@@ -11779,7 +11779,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[124]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11796,6 +11796,7 @@ div#notebook {
 <span class="c1"># Load the Boston housing dataset</span>
 <span class="c1"># 载入波士顿房屋的数据集</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;housing.csv&#39;</span><span class="p">)</span>
+
 <span class="n">prices</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">]</span>
 <span class="n">features</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;MEDV&#39;</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
  
@@ -11939,7 +11940,7 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>回答:1.增大RM特征值，MEDV会增大；因为RM越大，房间数就多，相应房屋越大。 2.LSTAT越大的话，MEDV就会越小；如果该地区的低收入阶层房东越多，说明该地区并不富裕，不发达或者地区环境不好。3.对于PTRATIO特征 </strong></p>
+<p><strong>回答:1.增大RM特征值，MEDV会增大；因为RM越大，房间数就多，相应房屋越大。 2.LSTAT越大的话，MEDV就会越小；如果该地区的低收入阶层房东越多，说明该地区并不富裕，不发达或者地区环境不好。3.对于PTRATIO特征,如果PTRATIO值越大的话，说明学生和老师的比例越大，这样会导致教学质量的下降，最终会影响该地区的MEDV减少。 </strong></p>
 
 </div>
 </div>
@@ -12069,7 +12070,7 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>回答:</strong></p>
+<p><strong>回答:从评分的结果来看，最终R2为0.923分，可以说成功的描述了目标变量的变化。但我们知道，误差有方差和偏差来决定的；如果仅仅从评分来说的话，只能说该计算模型的偏差很低，至于方差是否收敛是未知的。综上所述，该模型在偏差上成功的描述了目标变量的变化（如果不是以4个9位标准的话）</strong></p>
 
 </div>
 </div>
@@ -12143,7 +12144,7 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>答案:数据集按照一定比例分类训练集和测试用得数据集，目的是将训练集的数据进行fit；fit之后，将测试数据集进行预测，预测的结果与测试集的结果进行验证。这样我们可以通过交叉验证，得出预测模型是否可行。如果没有对模型进行测试，我们无法得出预测的结果是否有效。 </strong></p>
+<p><strong>答案:数据集按照一定比例分类训练集和测试用得数据集，目的是将训练集的数据进行fit；fit之后，将测试数据集进行预测，预测的结果与测试集的结果进行验证；测试集能够评估模型对未知数据的泛化能力。通过比较模型在测试集和训练集的表现，我们能够知道模型是否出现了过拟合或者欠拟合，评估模型在未知数据的泛化能力。 </strong></p>
 
 </div>
 </div>
@@ -13913,7 +13914,7 @@ MJT0REQkMJT0REQkMJT0REQkMJT0REQkMP4XRIkQzBogv7YAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: max_depth=4</strong></p>
+<p><strong>Answer: 最优模型的最大深度是4，max_depth=4。该深度与问题6中的猜测基本上是一致的。</strong></p>
 
 </div>
 </div>
@@ -13962,7 +13963,7 @@ MJT0REQkMJT0REQkMJT0REQkMJT0REQkMP4XRIkQzBogv7YAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[116]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Produce a matrix for client data</span>
@@ -14002,9 +14003,10 @@ Predicted selling price for Client 3&#39;s home: $937,230.00
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>答案:
-Predicted selling price for Client 1's home: $411,417.39
-Predicted selling price for Client 2's home: $230,828.57
-Predicted selling price for Client 3's home: $937,230.00</strong></p>
+Predicted selling price for Client 1's home: $$411,417.39
+Predicted selling price for Client 2's home: $$230,828.57
+Predicted selling price for Client 3's home: $$937,230.00
+从预测结果上来看，3位客户的预测值与数据样本中近似特征的价格非常接近；从数据特征上来看，房屋内房间总数越多，社区贫困指数越低，学生老师比例越低，最终房价越高；如客户端3基本上可以达到数据样本中的最大值。</strong></p>
 
 </div>
 </div>
@@ -14079,11 +14081,13 @@ Range in prices: $20,959.06
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>答案: 
-1.不适用：今天与1978相比，相关物价差别很大。
+<p>**答案: 
+构建模型是否在现实世界使用，主要看模型的健壮性；现实世界中，可能有更多的特征或者其它特征决定了房屋的价格，或者差异比较大的数据结构；只有通过不同的建模方法或者多次验证，根据实际情况，对参数进行调优，在相同的测试集上取得的分数是否是相似的。</p>
+<p>1.不适用：今天与1978相比，相关物价差别很大。
 2.不够:需要根据相关国家或地区，如面积、物业公司、房产性质、装修情况、是否是学区房等.
 3.通过复杂度曲线来说，验证的打分并不是很高，而且随着深度的增加，偏差和方差相应的增大。
-4.无法确定，需要根据实际情况判断是否应用在其它乡镇地区。</strong></p>
+4.无法确定，需要根据实际情况判断是否应用在其它乡镇地区。比如在中国，就无法应用。
+**</p>
 
 </div>
 </div>
